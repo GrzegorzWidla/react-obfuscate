@@ -1,8 +1,9 @@
 {
   "name": "react-obfuscate",
-  "version": "3.6.8",
+  "version": "3.7.0",
   "description": "An intelligent React component to obfuscate any contact link",
   "main": "dist/obfuscate.js",
+  "types": "index.d.ts",
   "files": [
     "dist/obfuscate.js"
   ],
@@ -33,6 +34,10 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "preversion": "yarn test && yarn lint:fix && yarn clean && yarn build && yarn export",
     "postpublish": "git push && git push --tag"
+  },
+  "dependencies": {
+    "@types/react": "17.0.13",
+    "@types/react-dom": "17.0.8"
   },
   "devDependencies": {
     "@babel/cli": "7.14.5",
